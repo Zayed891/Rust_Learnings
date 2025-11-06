@@ -1,0 +1,14 @@
+/Users/jayedakhtar/Rust-practice/rust-practice/target/debug/deps/serde-fa1899236035b50f.d: /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/jayedakhtar/Rust-practice/rust-practice/target/debug/build/serde-24c31269133f6334/out/private.rs
+
+/Users/jayedakhtar/Rust-practice/rust-practice/target/debug/deps/libserde-fa1899236035b50f.rlib: /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/jayedakhtar/Rust-practice/rust-practice/target/debug/build/serde-24c31269133f6334/out/private.rs
+
+/Users/jayedakhtar/Rust-practice/rust-practice/target/debug/deps/libserde-fa1899236035b50f.rmeta: /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/jayedakhtar/Rust-practice/rust-practice/target/debug/build/serde-24c31269133f6334/out/private.rs
+
+/Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/Users/jayedakhtar/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/Users/jayedakhtar/Rust-practice/rust-practice/target/debug/build/serde-24c31269133f6334/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/jayedakhtar/Rust-practice/rust-practice/target/debug/build/serde-24c31269133f6334/out
