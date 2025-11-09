@@ -241,6 +241,9 @@
 //     println!("{}", result);
 // }
 
+
+
+
 // struct Message<'a> {
 //     text : &'a String
 // }
@@ -286,32 +289,322 @@
 
 
 
-fn find_evem(num :i32)-> Option<i32>{
-    if num%2==0 {
-        Some(num)
-    } else{
-        None
-    }
-}
+// fn find_evem(num :i32)-> Option<i32>{
+//     if num%2==0 {
+//         Some(num)
+//     } else{
+//         None
+//     }
+// }
 
-fn validate_age(age : i32) -> Result<i32,String> {
-    if age >=18 {
-        Ok(age)
-    } else {
-        Err(String::from("Too Young"))
-    }
-}
+// fn validate_age(age : i32) -> Result<i32,String> {
+//     if age >=18 {
+//         Ok(age)
+//     } else {
+//         Err(String::from("Too Young"))
+//     }
+// }
+// fn main(){
+//     let num = 16;
+//     let res1 = find_evem(num);
+//     let res2 = validate_age(num);
+//     match res1 {
+//         Some(num) => println!("{}", num),
+//         None => println!("Not an even number")
+//     }
+
+//     match res2 {
+//         Ok(age) => println!("{}", age),
+//         Err(msg) => println!("{}",msg)
+//     }
+// }
+
+
+
+
+
+// use std::fmt::format;
+
+// fn parse_age( age: &str )-> Result<i32,String>{
+//     match age.parse::<i32>() {
+//         Ok(age) => Ok(age),
+//         Err(_) => Err(String::from("Invalid age"))
+//     }
+// }
+
+// fn process_user_input(age: &str,s: &str)->Result<String,String>{
+//     let res = parse_age(age)?;
+//     Ok(format!("User {} is {} yrs old",s, res))
+// }
+
+// fn main(){
+//     let res = process_user_input("25","John");
+//     match res {
+//         Ok(msg) => print!("{}",msg),
+//         Err(e) => print!("Error : {}",e)
+//     }
+// }
+
+
+
+
+// struct Book {
+//     title : String,
+//     author: String,
+//     pages : i32
+// }
+
+// impl Book {
+//     fn display_info(&self){
+//         println!("Book details are : {} {} {}", self.title,self.author,self.pages);
+//     }
+
+//     fn is_long_book(&self) -> bool {
+//         self.pages > 300
+//     }
+
+//     fn new (title : String, author : String, pages : i32) -> Book {
+//         Book {
+//             title,
+//             author,
+//             pages
+//         }
+//     }
+// }
+// fn main(){
+//     let book = Book::new(
+//         String::from("Rust Book"),
+//         String:: from("Steve Klabnik"),
+//         541
+//     );
+
+//     book.display_info();
+
+//     println!("{}", book.is_long_book());
+
+//     println!("Title : {} \n Author: {} \n Pages : {}", book.title, book.author, book.pages);
+// }
+
+
+
+
+// struct BankAccount {
+//     account_holder : String,
+//     balance : f64
+// }
+
+// impl BankAccount{
+//     fn deposit(&mut self,amount: f64){
+//         self.balance += amount;
+//     }
+
+//     fn withdraw(&mut self,amount: f64){
+//         self.balance -= amount;
+//     }
+
+//     fn display_balance(&self){
+//         println!("Current balance is {}",self.balance);
+//     }
+// }
+
+// fn main(){
+//     let mut account = BankAccount{
+//         account_holder : String::from("John"),
+//         balance : 5000.0
+//     };
+
+//     account.withdraw(1000.0);
+
+//     account.deposit(4000.0);
+
+//     account.display_balance();
+// }
+
+
+
+// struct Rectangle{
+//     width : f64,
+//     height : f64
+// }
+
+// impl Rectangle{
+//     fn area(&self)-> f64 {
+//         self.width * self.height
+//     }
+
+//     fn perimeter(&self) ->f64 {
+//         2.0*(self.width + self.height)
+//     }
+
+//     fn is_square(&self) -> bool {
+//         self.width == self.height
+//     }
+
+//     fn display(&self) {
+//         println!("Width is {}\n Height is {}", self.width, self.height);
+//     }
+// }
+
+// fn main(){
+//     let rect = Rectangle {
+//         width : 4.0,
+//         height : 8.0
+//     };
+
+//     println!("Area is {}\n Perimeter is {}\n is_square?: {}", rect.area(),rect.perimeter(),rect.is_square());
+//     rect.display();
+// }
+
+// enum Day {
+//     Monday,
+//     Tuesday,
+//     Wednesday,
+//     Thursday,
+//     Friday,
+//     Saturday,
+//     Sunday
+// }
+
+// fn main(){
+//     let day = Day :: Friday;
+//     match day {
+//         Day :: Monday => println!("This is monday"),
+//         Day :: Tuesday => println!("This is Tuesday"),
+//         Day :: Wednesday => println!("This is Wednesday"),
+//         Day :: Thursday => println!("This is thursday"),
+//         Day :: Friday => println!("Friday is weekday"),
+//         Day :: Saturday => println!("This is saturday"),
+//         Day :: Sunday => println!("OFF day")
+//     }
+// }
+
+
+// enum Season{
+//     Spring,
+//     Summer,
+//     Fall,
+//     Winter
+// }
+
+// impl Season {
+//     fn temperature(&self)-> i32{
+//         match self {
+//             Season :: Spring => 15,
+//             Season:: Summer => 25,
+//             Season::Fall => 10,
+//             Season:: Winter => 0
+//         }
+//     }
+// }
+
+// fn main(){
+//     let season = Season :: Summer;
+//     println!("Temp is {}", season.temperature());
+//     let season = Season :: Winter;
+//     println!("Temp is {}", season.temperature());
+// }
+
+
+// enum Message {
+//     Text(String),
+//     Number(i32),
+//     Empty
+// }
+
+// fn main(){
+//     let text = Message::Text(String::from("Hello"));
+//     let num = Message :: Number(32);
+//     let empty = Message:: Empty;
+
+//     match text {
+//         Message :: Text(s)=> println!("Text is {}", s),
+//         Message :: Number(n)=> println!("Number is {}", n),
+//         Message::Empty => println!("Empty message")
+//     }
+
+//     match num {
+//         Message :: Text(s)=> println!("Text is {}", s),
+//         Message :: Number(n)=> println!("Number is {}", n),
+//         Message::Empty => println!("Empty message")
+//     }
+
+//     match empty {
+//         Message :: Text(s)=> println!("Text is {}", s),
+//         Message :: Number(n)=> println!("Number is {}", n),
+//         Message::Empty => println!("Empty message")
+//     }
+
+    
+// }
+
+
+
+// enum UserStatus{
+//     Active,
+//     Inactive,
+//     Banned
+// }
+
+// impl UserStatus{
+//     fn is_active(&self)-> bool {
+//         match self {
+//             UserStatus ::Active => true,
+//             UserStatus :: Inactive => false,
+//             UserStatus :: Banned => false
+//         } 
+//     }
+// }
+// fn main(){
+//     let user1 = UserStatus:: Active;
+//     let user2 = UserStatus:: Inactive;
+//     let user3 = UserStatus:: Banned;
+
+//     println!("User1 is {}\n User2 is {}\n User3 is {}\n", user1.is_active(),user2.is_active(),user3.is_active());
+// }
+
+
+// enum PaymentMethod{
+//     CreditCard(String),
+//     Paypal(String),
+//     Cash(f64)
+// }
+
+// impl PaymentMethod{
+//     fn process_payment(&self) -> String {
+//         match self {
+//             PaymentMethod :: CreditCard(card) => {
+//                 format!("Processing card: {}", card)
+//             }
+//             PaymentMethod :: Paypal(email) => {
+//                 format!("Processing Paypal: {}", email)
+//             }
+//             PaymentMethod:: Cash(amount) => {
+//                 format!("Processing Cash: {} ", amount)
+//             }
+//         }
+//     }
+// }
+
+// fn main (){
+//     let payment1 = PaymentMethod::CreditCard(String::from("123443438937768"));
+//     let payment2 = PaymentMethod::Paypal(String::from("Zyzzz@gmail.com"));
+//     let payment3 = PaymentMethod::Cash(500.0);
+
+//     println!("Payment1 is {}\n Payment2 is {}\n Payment 3 is {}", payment1.process_payment(),payment2.process_payment(),payment3.process_payment());
+// }
+
+
+
+
+//-----------------------------Vec--------------------------
+
 fn main(){
-    let num = 16;
-    let res1 = find_evem(num);
-    let res2 = validate_age(num);
-    match res1 {
-        Some(num) => println!("{}", num),
-        None => println!("Not an even number")
+    let mut numbers:Vec<i32> = Vec :: new();
+    for i in 1..=10 {
+        numbers.push(i);
     }
 
-    match res2 {
-        Ok(age) => println!("{}", age),
-        Err(msg) => println!("{}",msg)
+    for num in &numbers{
+        println!("{}",num);
     }
 }
