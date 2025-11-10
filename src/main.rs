@@ -598,13 +598,155 @@
 
 //-----------------------------Vec--------------------------
 
-fn main(){
-    let mut numbers:Vec<i32> = Vec :: new();
-    for i in 1..=10 {
-        numbers.push(i);
-    }
+// fn main(){
+//     let mut numbers:Vec<i32> = Vec :: new();
+//     for i in 1..=10 {
+//         numbers.push(i);
+//     }
 
-    for num in &numbers{
-        println!("{}",num);
+//     for num in &numbers{
+//         println!("{}",num);
+//     }
+// }
+
+// fn main(){
+//     let mut s: Vec<&str> = Vec :: new();
+
+//     s.push("apple");
+//     s.push("banana");
+//     s.push("orange");
+
+//     for i in &s {
+//         println!("{}",i);
+//     }
+
+//     s.pop();
+
+//     for i in &s{
+//         println!("{}",i);
+//     }
+// }
+
+
+// fn main(){
+//     let mut numbers = vec![10,20,30,40,50];
+
+//     println!("{}",numbers[0]);
+//     println!("{}",numbers[numbers.len()-1]);
+
+//     numbers[2] = 99;
+
+//     for i in &numbers{
+//         println!("{}",i);
+//     }
+// }
+
+
+// fn main(){
+//     let num = vec![1,2,3,4,5,6,7,8,9,10];
+
+//     let new_vec : Vec<_>= num.iter().filter(|n| *n %2 ==0).copied().collect();
+
+//     print!("Even numbers: [");
+//     for i in &new_vec{
+//         print!("{},",i);
+//     }
+//     println!("]");
+// }
+
+
+// fn main(){
+//     let num = vec![1,2,3,4,5];
+
+//     let doubled : Vec<_> = num.iter().map(|n| *n*2).collect();
+    
+//     print!("Doubled :[");
+//     for i in &doubled{
+//         print!("{},", i);
+//     }
+//     println!("]");
+
+//     let squared: Vec<_> = num.iter().map(|n| *n * n).collect();
+    
+//     print!("Squared :[");
+//     for i in &squared{
+//         print!("{},", i);
+//     }
+//     println!("]");
+// }
+
+
+// fn main(){
+//     let mut num = vec![1,2,3,4,5,6,7,8,9,10];
+
+//     let even_num : Vec<_> = num.iter().filter(|n| *n %2==0).copied().collect();
+
+//     let res_num : Vec<_> = even_num.iter().map(|n| *n*2).collect();
+
+//     print!("Even numbers doubled: [");
+//     for i in &res_num{
+//         print!("{},", i);
+//     }
+//     println!("]");
+
+// }
+
+// fn main(){
+//     let num = vec![3,7,2,9,1,8,4];
+
+//     println!("Length : {}",num.len());
+
+//     let mut sum =0;
+//     for i in &num{
+//         sum += i;
+//     }
+
+//     println!("Sum :{}",sum);
+
+//     let mut cnt =0;
+//     for i in &num {
+//         if *i>5{
+//             cnt +=1;
+//         }
+//     }
+
+//     println!("Numbers>5 : {}",cnt);
+// }
+
+
+// fn main(){
+//     let mut num = vec![1,2,3,4,5];
+
+//     num.remove(2);
+
+//     print!("After removal: [");
+//     for i in &num{
+//         print!("{},",i);
+//     }
+//     println!("]");
+
+//     num.clear();
+
+//     print!("After clear: ");
+//     println!("{:?}",num);
+// }
+
+
+
+//------------------------Todo App-------------------------
+
+struct Todo {
+    title : String,
+    description : String,
+    is_done : bool
+}
+
+impl Todo {
+    fn createTodo (title: String,description: String,is_done:bool) -> Todo{
+        Todo {title,description,is_done}
     }
+}
+
+fn main(){
+    let todo1 = Todo::createTodo(String::from("Go to gym"), String::from("Today is pushday"), false);
 }
