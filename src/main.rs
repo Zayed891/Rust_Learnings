@@ -735,18 +735,166 @@
 
 //------------------------Todo App-------------------------
 
-struct Todo {
-    title : String,
-    description : String,
-    is_done : bool
+// #[derive(Debug,Clone)]
+// struct Todo {
+//     id : i32,
+//     title : String,
+//     description : String,
+//     is_done : bool
+// }
+
+// impl Todo {
+//     fn new (id:i32, title: String,description: String) -> Todo{
+//         Todo {id,title,description,is_done:false,}
+//     }
+
+//     fn mark_todo(&mut self){
+//         self.is_done = true;
+//     }
+
+//     fn display_todo (&self){
+//         let status = if self.is_done {"Done"}else{"pending"};
+//         println!("[{}] ID:{} - {} ({})", status, self.id,self.title,self.description);
+//     }
+// }
+
+// struct TodoApp{
+//     todos : Vec<Todo>,
+//     next_id : i32
+// }
+
+// impl TodoApp{
+//     fn new() -> TodoApp{
+//         TodoApp {todos: Vec::new(),next_id:1}
+//     }
+
+//     fn add_Todo(&mut self, title:String, description: String){
+//         let todo = Todo ::new(self.next_id, title, description);
+//         self.todos.push(todo);
+//         self.next_id +=1;
+//     }
+
+//     fn list_todos(&self){
+//         if self.todos.is_empty(){
+//             println!("No todos to display");
+//         }
+
+//         for todo in &self.todos{
+//             todo.display_todo();
+//         }
+//     }
+
+//     fn mark_todo_done (&mut self, id:i32)-> Result<(),String> {
+//         for todo in &mut self.todos{
+//             if todo.id == id{
+//                 todo.mark_todo();
+//                 return Ok(());
+//             }
+//         }
+//         Err(format!("Todo with {} not found",id))
+//     }
+
+//     fn delete_todo9(&mut self, id:i32) -> Result<(), String> {
+//         let original_len = self.todos.len();
+
+//         self.todos.retain(|t| t.id !=id);
+
+//         if self.todos.len() < original_len {
+//             println!("Deleted Todo {}", id);
+//             return Ok(());
+//         } else {
+//             Err(format!("Todo with {} not found", id))
+//         }
+//     }
+
+//     fn show_pending (&self){
+//         let pending_todos: Vec<&Todo> = self.todos.iter().filter(|t| !t.is_done).collect();
+
+//         if pending_todos.is_empty(){
+//             println!("All todos completed");
+//             return;
+//         }
+
+//         for todo in &pending_todos {
+//             todo.display_todo();
+//         }
+//         println!();
+//     }
+
+//     fn show_completed (&self){
+//         let completed: Vec<&Todo> = self.todos.iter().filter(|t| t.is_done).collect();
+
+//         if completed.is_empty(){
+//             println!("No completed Todos yet!");
+//         }
+//         for todo in &completed{
+//             todo.display_todo();
+//         }
+
+//         println!();
+//     }
+
+// }
+
+// fn main(){
+//     let mut app = TodoApp:: new();
+
+//     app.add_Todo(String::from("Go to gym"), String::from("Today is push day"));
+
+//     app.add_Todo(String::from("Do maths"), String::from("Quadratic equation"));
+
+//     app.add_Todo(String::from("Practice Rust"), String::from("Complete the mini project"));
+
+//     // app.list_todos();
+
+//     app.mark_todo_done(3);
+
+//     // app.list_todos();
+
+//     app.delete_todo9(3);
+
+//     // app.list_todos();
+
+//     app.show_pending();
+
+//     app.mark_todo_done(1);
+//     app.mark_todo_done(2);
+
+//     app.list_todos();
+
+//     app.show_completed();
+// }
+
+
+struct Stack<T>{
+    items: Vec<T>
 }
 
-impl Todo {
-    fn createTodo (title: String,description: String,is_done:bool) -> Todo{
-        Todo {title,description,is_done}
+impl<T> Stack<T>{
+
+    fn new()-> Stack<T>{
+        Stack {items: Vec::new()}
+    }
+    fn push(&mut self, item:T){
+        self.items.push(item);
+    }
+
+    fn pop(&mut self)-> Option<T>{
+        self.items.pop()
+    }
+
+    fn peek(&self) -> Option<&T>{
+        self.items.last()
+    }
+
+    fn is_empty(&self) -> bool{
+        self.items.is_empty()
+    }
+
+    fn size(&self) -> usize{
+        self.items.len()
     }
 }
-
 fn main(){
-    let todo1 = Todo::createTodo(String::from("Go to gym"), String::from("Today is pushday"), false);
+
 }
