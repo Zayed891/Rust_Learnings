@@ -12,6 +12,7 @@ mod structs;
 mod enums;
 mod vectors;
 mod generics;
+mod file_io;
 
 fn main() {
     println!("🦀 RUST LEARNING JOURNEY 🦀");
@@ -94,4 +95,18 @@ fn main() {
     println!("\n============================");
     println!("✅ ALL EXERCISES COMPLETED!");
     println!("============================");
+
+    //FILE I/O
+
+    println!("\n I/O exercises");
+    file_io ::write_to_file_exercise();
+    file_io::read_from_file_exercise();
+    file_io::append_to_file_exercise();
+    file_io::list_files_exercise();
+    file_io ::create_directory_exercise();
+    file_io ::file_metadata_exercise();
+    file_io::copy_file_exercise();
+    file_io ::delete_file_exercise();
+    file_io::read_lines_exercise();
+    file_io::count_words_exercise();
 }

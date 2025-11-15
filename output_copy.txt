@@ -1,0 +1,4 @@
+Hello,Rust! 
+ File I/O is awesome! 
+ Let's learn Rust together!
+ It's been exciting to learn rust so far
